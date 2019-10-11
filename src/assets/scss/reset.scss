@@ -39,3 +39,10 @@ b, strong, em {
 	font-weight: normal;
 }
 strong { font-weight: 700; }
+
+// Common
+.clearfix::after {
+	content: '';
+	display: table;
+	clear: both;
+}
