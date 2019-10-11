@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Home from './templates/Home.vue'
 
 Vue.use(Router)
 
@@ -14,9 +14,9 @@ export default new Router({
       component: Home
     },
     {
-      path: '/iphone-11',
+      path: '/iphones-11',
       name: 'IPhone11',
-      component: () => import('./views/IPhone11')
+      component: () => import('./templates/iphone-11/views/IPhone11')
     }
   ]
 })
