@@ -1,14 +1,14 @@
 <template>
-  <div id="header">
+  <nav id="header">
     <div class="header_wrap clearfix">
-      <h2 class="title">IPhone 11</h2>
+      <h2 class="title">iPhone 11</h2>
       <ul class="link_wrap">
         <li class="outline">개요</li>
         <li class="spec">제품 사양</li>
         <li class="price">가격 보기</li>
       </ul>
     </div>
-  </div>
+  </nav>
 </template>
 
 <script>
