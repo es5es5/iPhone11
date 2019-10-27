@@ -19,7 +19,7 @@ export default {
 
 <style lang="scss" scoped>
 .header_wrap {
-  height: 44px;
+  height: 3.15rem;
   border-bottom: 1px solid #ccc;
 }
 .title {

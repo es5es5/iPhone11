@@ -13,7 +13,7 @@ export default {
 
 <style lang="scss" scoped>
 .top_wrap {
-  height: 44px;
+  height: 3.15rem;
   background-color: #333;
 }
 </style>

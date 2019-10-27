@@ -1,6 +1,6 @@
 <template>
   <div id="iphone11">
-    <Top></Top>
+    <Top class="top"></Top>
     <Header class="header"></Header>
     <main>
       <Section1></Section1>
@@ -24,8 +24,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.top {
+  width: 100%;
+}
 .header {
-  margin: 0 auto;
-  width: 80%;
+  width: 100%;
+  @media screen and (min-width: 1024px) {
+    width: 1024px;
+    margin: 0 auto;
+  }
 }
 </style>
