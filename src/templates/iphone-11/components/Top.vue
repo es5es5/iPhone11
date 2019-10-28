@@ -1,6 +1,6 @@
 <template>
   <div id="top">
-    <div class="top_wrap">
+    <nav class="top_wrap">
       <ul class = "nav-list">
         <li class = "apple-logo">
           <a class = "link-main" href="#">
@@ -39,7 +39,7 @@
            </a>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
 </template>
 
@@ -50,10 +50,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-p,span{
-  margin: 0;
-  padding: 0;
-}
 
 .nav-list{
   max-width: 980px;

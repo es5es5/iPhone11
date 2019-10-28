@@ -30,7 +30,7 @@ export default {
 .header {
   width: 100%;
   @media screen and (min-width: 1024px) {
-    width: 1024px;
+    max-width: 980px;
     margin: 0 auto;
   }
 }
