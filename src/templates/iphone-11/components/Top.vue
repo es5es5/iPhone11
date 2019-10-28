@@ -60,13 +60,13 @@ export default {
 
 .nav-list p {
   color : #ffffff;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 2.9;
 }
 
 .nav-list li {
-  padding: 0 10px;
+  padding: 0 0.714285rem;
   cursor: pointer;
     &:hover{
       opacity: 0.5;
@@ -75,11 +75,11 @@ export default {
 }
 
 .img-main-logo,.img-main-search,.img-main-market{
-    background-size: 16px 44px;
+    background-size: 1.142857rem 3.142857rem;
     background-repeat: no-repeat;
     background-position: center center;
-    width: 16px;
-    height: 44px;
+    width: 1.142857rem;
+    height: 3.142857rem;
 }
 
 .img-main-logo{
@@ -93,7 +93,6 @@ export default {
 .img-main-market{
   background-image: url(https://www.apple.com/ac/globalnav/4/ko_KR/images/globalnav/bag/image_large.svg);
 }
-
 
 .top_wrap {
   height: 3.15rem;

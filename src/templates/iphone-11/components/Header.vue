@@ -42,23 +42,23 @@ export default {
 
 .link_wrap {
     display: flex;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     font-weight: 600;
     li {
-      margin-left: 20px;
-      padding: 0 2px;
+      margin-left: 1.4285714rem;
+      padding: 0 0.14285rem;
       color: #4f4f50;
       p{
         cursor: pointer;
-        margin-top: 15px;
+        margin-top: 1.071428rem;
       }
     }
 
     .price p{
       background-color: #147ce5;
-      padding: 4px 11px;
-      margin-top: 11px;
-      border-radius: 12px;
+      padding: 0.28571rem 0.785714rem;
+      margin-top: 0.785714rem;
+      border-radius: 0.857142rem;
       color: #ffffff;
   }
 }
