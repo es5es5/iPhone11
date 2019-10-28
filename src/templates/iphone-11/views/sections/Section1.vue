@@ -10,6 +10,26 @@
         <a class="link">동영상 보기</a>
       </div>
     </div>
+    <BtnNormal
+      :buttonName="'구입하기'"
+      :color="'blue'"
+      :type="'normal'">
+    </BtnNormal>
+    <BtnNormal
+      :buttonName="'팔기'"
+      :color="'blue'"
+      :type="'normal'">
+    </BtnNormal>
+    <BtnNormal
+      :buttonName="'뒤로가기'"
+      :color="'red'"
+      :type="'normal'">
+    </BtnNormal>
+    <BtnNormal
+      :buttonName="'검색'"
+      :color="'red'"
+      :type="'normal'">
+    </BtnNormal>
     <div class="contents_wrap">
       <div class="slide_warp">
         <h2 class="section--title">첫눈에 반하다. 한 번, 두 번, 세 번, 네 번, 다섯 번, 여섯 번이나.</h2>
