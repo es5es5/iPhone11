@@ -1,21 +1,34 @@
 @charset 'utf-8';
 
+// Common
+.clearfix::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
 // common
 .link {
   &:hover {
-    text-decoration: underline;
     cursor: pointer;
   }
 }
+
+// text
+.text--underline { text-decoration: underline; }
+.text--bold { font-weight: 500; }
+.text--right { text-align: right; }
+.text--left { text-align: left; }
 
 // section
 .section--title {
   font-size: 4rem;
   font-weight: 700;
+  color: #1d1d1f;
 }
 .section--contents {
   font-size: 1.715rem;
   font-weight: 600;
   letter-spacing: .011rem;
-  color: gray;
+  color: #8c8c8c;
 }
