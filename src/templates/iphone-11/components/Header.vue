@@ -34,7 +34,7 @@ export default {
 
 .title {
   display: inline-block;
-  font-size: 1.4em;
+  font-size: 1.4rem;
   line-height: 2.2;
   font-weight: bold;
   cursor: pointer;
