@@ -94,6 +94,7 @@ export default {
   background-image: url(https://www.apple.com/ac/globalnav/4/ko_KR/images/globalnav/bag/image_large.svg);
 }
 
+
 .top_wrap {
   height: 3.15rem;
   background-color: #333;

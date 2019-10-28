@@ -28,21 +28,26 @@ export default {
 <style lang="scss" scoped>
 #section1 {
   text-align: center;
-  @media (max-width: 52.5rem) {
+  @media (max-width: 735px) {
     text-align: left;
   }
 }
 .iphone_main {
+  display: block;
   width: 50%;
   height: 50%;
-  @media (max-width: 52.5rem) {
-    padding: 0% 25%;
-  }
+  margin: 0 auto;
+  // @media (max-width: 735px) {
+  //   padding: 0% 25%;
+  // }
+  // @media (max-width: 735px) {
+  //   padding: 0% 25%;
+  // }
 }
 .contents_wrap {
   width: 60%;
   margin: 10rem auto;
-  @media (max-width: 52.5rem) {
+  @media (max-width: 735px) {
     width: 90%;
   }
 
