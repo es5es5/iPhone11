@@ -1,0 +1,9 @@
+@charset 'utf-8';
+
+.contents_wrap {
+  width: 60%;
+  margin: 10rem auto;
+  @media (max-width: 735px) {
+    width: 90%;
+  }
+}

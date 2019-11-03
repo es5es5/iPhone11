@@ -10,12 +10,6 @@
         <a class="link">동영상 보기</a>
       </div>
     </div>
-    <div class="contents_wrap">
-      <div class="slide_warp">
-        <h2 class="section--title">첫눈에 반하다. 한 번, 두 번, 세 번, 네 번, 다섯 번, 여섯 번이나.</h2>
-        <img src="" alt="iPhone 11 [CHOOSE THE COLOR Image] Here." title="iphone11_side">
-      </div>
-    </div>
   </div>
 </template>
 
@@ -38,18 +32,10 @@ export default {
   height: 50%;
   margin: 0 auto;
 }
-.contents_wrap {
-  width: 60%;
-  margin: 10rem auto;
-  @media (max-width: 735px) {
-    width: 90%;
-  }
-
-  .rewardSales {
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: .011rem;
-  }
+.rewardSales {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: .011rem;
 }
 .vod_wrap {
   font-size: 1.715rem;
