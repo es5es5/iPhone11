@@ -4,6 +4,8 @@ import router from './router'
 import store from './store'
 import GlobalComponents from './templates/iphone-11/components'
 
+import './plugins/vue-awesome'
+
 Vue.use(GlobalComponents)
 Vue.config.productionTip = false
 
