@@ -4,6 +4,7 @@
     <Header class="header"></Header>
     <main>
       <Section1></Section1>
+      <Section3></Section3>
     </main>
   </div>
 </template>
@@ -12,13 +13,15 @@
 import Top from '../components/Top'
 import Header from '../components/Header'
 import Section1 from './sections/Section1'
+import Section3 from './sections/Section3'
 
 export default {
   name: 'IPhone11',
   components: {
     Top,
     Header,
-    Section1
+    Section1,
+    Section3
   }
 }
 </script>
