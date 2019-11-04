@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './templates/Home.vue'
+import IPhoneMarketRoutes from './templates/iphone-11/routes.js'
 
 Vue.use(Router)
 
@@ -14,9 +15,13 @@ export default new Router({
       component: Home
     },
     {
-      path: '/iphones-11',
+      path: '/iphone-11',
+      redirect: '/iphone-11/main',
       name: 'IPhone11',
-      component: () => import('./templates/iphone-11/views/IPhone11')
+      component: () => import('./templates/iphone-11/views/IPhone11'),
+      children: [
+        ...IPhoneMarketRoutes
+      ]
     }
   ]
 })

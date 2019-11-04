@@ -1,7 +1,7 @@
 <template>
   <nav id="header">
     <div class="header_wrap">
-      <h2 class="title">iPhone 11</h2>
+      <h2 class="title" @click="goMain">iPhone 11</h2>
       <ul class="link_wrap">
         <li class="outline">
           <P>개요</P>
@@ -9,7 +9,7 @@
         <li class="spec">
           <p>제품 사양</p>
         </li>
-        <li class="price">
+        <li class="price" @click="goMarket">
           <p>구입하기</p>
         </li>
       </ul>
@@ -19,7 +19,21 @@
 
 <script>
 export default {
-
+  name: 'Header',
+  created () {
+  },
+  methods: {
+    goMain () {
+      this.$router.push({
+        name: 'IPhoneMain'
+      })
+    },
+    goMarket () {
+      this.$router.push({
+        name: 'IPhoneMarket'
+      })
+    }
+  }
 }
 </script>
 
