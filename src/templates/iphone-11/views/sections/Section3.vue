@@ -1,6 +1,5 @@
 <template>
     <div class = "section3">
-      <span style="position: fixed; top: 0; right:0;">{{ scrolled }}</span>
         <div class = "section-header">
             <div class = "header-content section--title">
                 <p>동영상 제작 수준의 비약적 향상. 비결은 디테일의 차이</p>
@@ -54,7 +53,7 @@ export default {
   },
   methods: {
     handleScroll () {
-      this.scrolled = window.scrollY > 1440
+      this.scrolled = window.scrollY > 1170
       if (this._scrolled) {
         document.getElementById('motion-video').play()
       } else {
