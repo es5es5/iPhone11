@@ -1,14 +1,15 @@
 <template>
     <div class = "section3">
+      <span style="position: fixed; top: 0; right:0;">{{ scrolled }}</span>
         <div class = "section-header">
             <div class = "header-content section--title">
                 <p>동영상 제작 수준의 비약적 향상. 비결은 디테일의 차이</p>
             </div>
         </div>
         <div class = "section-motion">
-            <video muted autoplay loop src = "@/assets/video/apple_motion_video.mp4" id = "motion-video"></video>
+            <video muted loop src = "@/assets/video/apple_motion_video.mp4" id = "motion-video"></video>
         </div>
-        <div class = "section-scroll">
+        <div class = "section-scroll" @scroll="handleScroll">
             <div class = "scroll-box">
                 <button type = "button">
                     <div class = "scroll-box-content-1">
@@ -40,7 +41,33 @@
 
 <script>
 export default {
-  name: 'Section3'
+  name: 'Section3',
+  data () {
+    return {
+      scrolled: false
+    }
+  },
+  computed: {
+    _scrolled () {
+      return this.scrolled
+    }
+  },
+  methods: {
+    handleScroll () {
+      this.scrolled = window.scrollY > 1440
+      if (this._scrolled) {
+        document.getElementById('motion-video').play()
+      } else {
+        document.getElementById('motion-video').pause()
+      }
+    }
+  },
+  created () {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
 }
 </script>
 
