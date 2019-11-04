@@ -1,7 +1,7 @@
 const IPhoneMarketRoutes = [{
   path: 'main',
   name: 'IPhoneMain',
-	component: () => import('./views/IPhoneMain')
+  component: () => import('./views/IPhoneMain')
 }, {
   path: 'market',
   name: 'IPhoneMarket',
