@@ -1,7 +1,7 @@
 <template>
     <div class = "section3">
         <div class = "section-header">
-            <div class = "header-content">
+            <div class = "header-content section--title">
                 <p>동영상 제작 수준의 비약적 향상. 비결은 디테일의 차이</p>
             </div>
         </div>
@@ -27,11 +27,11 @@
                 </button>
             </div>
         </div>
-        <div class = "section-body">
+        <div class = "section-body section--contents">
             <p class = "body-content-1 text--bold">
                 스마트폰 사상 가장 뺴어난 퀄리티의 동영상 촬영 및 편집.
             </p>
-            <p class = "body-content">
+            <p class = "body-content-2">
                 iPhone 11에 탑재된 모든 카메라는 아름답고 선명한 초당 60 프레임의 4K 동영상을 촬영합니다. 4배나 더 넓은 장면을 포착하는 울트라 와이드 카메라는 원반을 잡으러 쏜살같이 달리는 강아지의 모습과 같은 역동적인 움직임을 촬영하기에 제격이죠. 피아노 연주회 무대에 오른 아이를 촬영 중인데 주변이 소란스러운가요? 걱정 마세요. 카메라를 줌인해서 아이를 가까이 찍으면 오디오도 같이 줌인되니까요. 게다가 이제는 동영상도 사진 다루듯 간편하게 편집할 수 있답니다.
             </p>
         </div>
@@ -50,8 +50,6 @@ export default {
         width: 100%;
             p {
                 color: #ffffff;
-                font-size: 3.5rem;
-                font-weight: 800;
                 width: 780px;
                 margin: 0 auto;
             }
@@ -65,24 +63,32 @@ export default {
         background-color: #f3f2f2;
         width: fit-content;
         margin: 0 auto;
-        border-radius: 14px;
+        border-radius: 1rem;
     }
 
     .section-scroll{
         text-align: center;
-        margin: 20px 0;
+        margin: 1.428rem 0;
         button{
             border: 0;
-            padding: 5px 20px;
+            padding: 0.357rem 1.428rem;
             background-color: rgba(0, 0, 0, 0);
             &:focus{
                 background-color: black;
-                border-radius: 14px;
+                border-radius: 1rem;
                 p{
                     color: #ffffff
                 }
             }
         }
+    }
+
+    .body-content-1{
+        color : #1d1d1f;
+    }
+
+    .body-content-1,.body-content-2{
+        font-size : 1.3rem;
     }
 
 </style>

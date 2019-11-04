@@ -7,10 +7,10 @@
       <p class="rewardSales">보상 판매 시 ₩695,600부터.*</p>
       <div class="vod_wrap">
         <a class="link text--underline-hover">키노트 시청하기
-          <v-icon name="play-circle" scale="1.2"></v-icon>
+          <v-icon name="play-circle" scale="1.2" class = "wrap-img"></v-icon>
         </a>
         <a class="link text--underline-hover">동영상 보기
-          <v-icon name="play-circle" scale="1.2"></v-icon>
+          <v-icon name="play-circle" scale="1.2" class = "wrap-img"></v-icon>
         </a>
       </div>
     </div>
@@ -48,7 +48,7 @@ export default {
   font-weight: 600;
   .link {
     display: inline-block;
-    vertical-align: middle;
+    // vertical-align: middle;
     &:last-child {
       margin-left: 1.71428571rem;
     }
@@ -60,6 +60,10 @@ export default {
       &:last-child {
         margin: 2.2rem 0 0 0;
       }
+    }
+
+    .wrap-img{
+      vertical-align: -4px;
     }
   }
 }
