@@ -5,7 +5,7 @@
 
 
 ### Router
-- 웹페이지간의 'OO'
+- 웹페이지간의 '이동'
 - <details>
     <summary>Vue SPA 제작에 유용한 라우팅 라이브러리</summary>
     <br>
