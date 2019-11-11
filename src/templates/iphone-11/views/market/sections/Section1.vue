@@ -4,11 +4,11 @@
       <img :src="require(`@/assets/img/iphone/market/${selectColor}.png`)" class="img--market" :alt="`iphone11_market_color_${selectColor}`" :title="`iphone11_market_color_${selectColor}`">
     </div>
     <div class="right_wrap">
-      <h3>iPhone11 구입하기</h3>
-      <p>₩990,000 부터</p>
-      <p>맘에 드는 마감을 선택하세요.</p>
+      <h3 class="market--title">iPhone11 구입하기</h3>
+      <p class="market--contents">₩990,000 부터</p>
+      <p class="text-bold">맘에 드는 마감을 선택하세요.</p>
       <div class="color_wrap">
-        <div class="color" v-for="(item, index) in colorArr" :key="`color_${index}`">
+        <div class="color" :class="{ 'color-active': item.id === selectColor }" v-for="(item, index) in colorArr" :key="`color_${index}`" @click="choiceColor(item.id)">
           <div class="colorBall" :style="`background-color: ${item.id}`"></div>
           <span class="colorName">{{ item.name }}</span>
         </div>
@@ -21,7 +21,7 @@
 export default {
   data () {
     return {
-      selectColor: 'red',
+      selectColor: 'black',
       colorArr: [{
         id: 'black',
         name: '블랙'
@@ -41,6 +41,11 @@ export default {
         id: 'red',
         name: '레드'
       }]
+    }
+  },
+  methods: {
+    choiceColor (color) {
+      this.selectColor = color
     }
   }
 }
@@ -74,19 +79,26 @@ export default {
     box-sizing: border-box;
     width: calc(50% - 1rem);
     padding-top: 15%;
-    border: 1px solid #ddd;
+    border: 1px solid darkgrey;
+    border-radius: .3rem;
     margin: .5rem;
 
+    &:hover {
+      border-color: gray;
+    }
     &:active {
-      box-sizing: border-box;      
-      border: 2px solid blue;
+      border-color: blue;
+    }
+    &.color-active {
+      border-color: blue;
     }
   }
+  
   .colorBall {
     margin: 0 auto;
     width: 2.5rem;
     height: 2.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid gray;
     border-radius: 2.5rem;
   }
 }
