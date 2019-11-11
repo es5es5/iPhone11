@@ -1,6 +1,8 @@
 <template>
   <div class="iphone_market">
-    Hello I'm Market!
+    <div class="contents_wrap">
+      Market
+    </div>
   </div>
 </template>
 

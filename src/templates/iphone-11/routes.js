@@ -1,11 +1,11 @@
-const IPhoneMarketRoutes = [{
+const IPhoneRoutes = [{
   path: 'main',
-  name: 'IPhoneMain',
-  component: () => import('./views/IPhoneMain')
+  name: 'IPhoneMainLayout',
+  component: () => import('./views/main/IPhoneMainLayout')
 }, {
   path: 'market',
-  name: 'IPhoneMarket',
-  component: () => import('./views/IPhoneMarket')
+  name: 'IPhoneMarketLayout',
+  component: () => import('./views/market/IPhoneMarketLayout')
 }]
 
-export default IPhoneMarketRoutes
+export default IPhoneRoutes
