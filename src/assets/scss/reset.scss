@@ -1,6 +1,9 @@
 @charset 'utf-8';
 
 /* reset */
+*, *::after, *::before {
+	box-sizing: border-box;
+}
 html, body {
   margin: 0;
   padding: 0;

@@ -9,7 +9,7 @@
       <p class="text-bold">맘에 드는 마감을 선택하세요.</p>
       <div class="color_wrap">
         <div class="color" :class="{ 'color-active': item.id === selectColor }" v-for="(item, index) in colorArr" :key="`color_${index}`" @click="choiceColor(item.id)">
-          <div class="colorBall" :style="`background-color: ${item.id}`"></div>
+          <div class="colorBall" :class="`colorBall-${item.id}`"></div>
           <span class="colorName">{{ item.name }}</span>
         </div>
       </div>
@@ -52,9 +52,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$market-white: rgb(249, 246, 239);
+$market-black: rgb(31, 33, 32);
+$market-green: rgb(173, 224, 205);
+$market-yellow: rgb(255, 230, 129);
+$market-purple: rgb(209, 205, 219);
+$market-red: rgb(186, 12, 47);
+
 .section1 {
-  width: 980px;
   margin: 0 auto;
+  max-width: 980px;
 }
 .left_wrap {
   width: 50%;
@@ -71,14 +78,19 @@ export default {
 
 .color_wrap {
   width: 100%;
+  .color:nth-child(odd) {
+    margin-left: 0;
+  }
+  .color:nth-child(even) {
+    margin-right: 0;
+  }
 
   .color {
     display: inline-block;
     text-align: center;
     cursor: pointer;
-    box-sizing: border-box;
     width: calc(50% - 1rem);
-    padding-top: 15%;
+    padding: 6% 0;
     border: 1px solid darkgrey;
     border-radius: .3rem;
     margin: .5rem;
@@ -86,20 +98,41 @@ export default {
     &:hover {
       border-color: gray;
     }
-    &:active {
-      border-color: blue;
-    }
-    &.color-active {
-      border-color: blue;
+    &:active, &.color-active {
+      box-shadow: 0px 0px .35rem .01rem #0070c9;
+      border-color: #0070c9;
     }
   }
-  
+
   .colorBall {
     margin: 0 auto;
-    width: 2.5rem;
-    height: 2.5rem;
-    border: 1px solid gray;
-    border-radius: 2.5rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    &.colorBall-white {
+      background-color: $market-white;
+      border-color: rgba($market-white, .5);
+    }
+    &.colorBall-black {
+      background-color: $market-black;
+      border-color: rgba($market-black, .5);
+    }
+    &.colorBall-green {
+      background-color: $market-green;
+      border-color: rgba($market-green, .5);
+    }
+    &.colorBall-yellow {
+      background-color: $market-yellow;
+      border-color: rgba($market-yellow, .5);
+    }
+    &.colorBall-purple {
+      background-color: $market-purple;
+      border-color: rgba($market-purple, .5);
+    }
+    &.colorBall-red {
+      background-color: $market-red;
+      border-color: rgba($market-red, .5);
+    }
   }
 }
 </style>>
