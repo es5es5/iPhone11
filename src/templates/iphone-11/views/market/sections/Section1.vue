@@ -5,12 +5,20 @@
     </div>
     <div class="right_wrap">
       <h3 class="market--title">iPhone11 구입하기</h3>
-      <p class="market--contents">₩990,000 부터</p>
-      <p class="text-bold">맘에 드는 마감을 선택하세요.</p>
+      <p class="market--contents">$2,000 부터</p>
+      <p class="text-bold">마음에 쏙 드는 색상을 선택하세요.</p>
       <div class="color_wrap">
-        <div class="color" :class="{ 'color-active': item.id === selectColor }" v-for="(item, index) in colorArr" :key="`color_${index}`" @click="choiceColor(item.id)">
+        <div class="color" :class="{ 'selected': item.id === selectColor }" v-for="(item, index) in colorArr" :key="`color_${index}`" @click="choiceColor(item.id)">
           <div class="colorBall" :class="`colorBall-${item.id}`"></div>
           <span class="colorName">{{ item.name }}</span>
+        </div>
+        <small>레드 모델은 정말 예뻐요.(I Like it!)</small>
+      </div>
+      <div class="storage_wrap">
+        <p class="text-bold">충분한 용량을 선택하세요.</p>
+        <div class="storage" :class="{ 'selected': item.storage === selectStorage }" v-for="(item, index) in storageArr" :key="`storage_${index}`" @click="choiceStorage(item)">
+          <p class="storageName">{{ item.storage }}</p>
+          <p class="price">{{ item.price }}</p>
         </div>
       </div>
     </div>
@@ -40,12 +48,29 @@ export default {
       }, {
         id: 'red',
         name: '레드'
+      }],
+      selectStorage: '256GB',
+      storageArr: [{
+        storage: '128GB',
+        price: '$2,000'
+      }, {
+        storage: '256GB',
+        price: '$2,760'
+      }, {
+        storage: '1TB',
+        price: '$3,540'
+      }, {
+        storage: '2TB',
+        price: '$4,000'
       }]
     }
   },
   methods: {
     choiceColor (color) {
       this.selectColor = color
+    },
+    choiceStorage (storage) {
+      this.selectStorage = storage
     }
   }
 }
@@ -77,19 +102,26 @@ $market-red: rgb(186, 12, 47);
 }
 
 .color_wrap {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dashed darkgrey;
+}
+.storage_wrap {
+  margin-top: 1.5rem;
+}
+.color_wrap, .storage_wrap {
   width: 100%;
-  .color:nth-child(odd) {
+  .color:nth-child(odd), .storage:nth-child(odd) {
     margin-left: 0;
   }
-  .color:nth-child(even) {
+  .color:nth-child(even), .storage:nth-child(even) {
     margin-right: 0;
   }
 
-  .color {
+  .color, .storage {
     display: inline-block;
     text-align: center;
     cursor: pointer;
-    width: calc(50% - 1rem);
+    width: calc(50% - .5rem);
     padding: 6% 0;
     border: 1px solid darkgrey;
     border-radius: .3rem;
@@ -98,10 +130,17 @@ $market-red: rgb(186, 12, 47);
     &:hover {
       border-color: gray;
     }
-    &:active, &.color-active {
+    &:active, &.selected {
       box-shadow: 0px 0px .35rem .01rem #0070c9;
       border-color: #0070c9;
     }
+  }
+  .storageName {
+    font-size: 2rem;
+  }
+  .price {
+    font-size: 1.2rem;
+    color: gray;
   }
 
   .colorBall {
