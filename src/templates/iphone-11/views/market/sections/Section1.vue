@@ -143,7 +143,7 @@ $market-red: rgb(186, 12, 47);
   }
 
   .colorBall {
-    margin: 0 auto;
+    margin: 0 auto .25rem;
     width: 2rem;
     height: 2rem;
     border-radius: 2rem;
