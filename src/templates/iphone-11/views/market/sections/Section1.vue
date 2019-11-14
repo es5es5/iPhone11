@@ -14,9 +14,9 @@
         </div>
         <small>레드 모델은 정말 예뻐요.(I Like it!)</small>
       </div>
+      <p class="text-bold">충분한 용량을 선택하세요.</p>
       <div class="storage_wrap">
-        <p class="text-bold">충분한 용량을 선택하세요.</p>
-        <div class="storage" :class="{ 'selected': item.storage === selectStorage }" v-for="(item, index) in storageArr" :key="`storage_${index}`" @click="choiceStorage(item)">
+        <div class="storage" :class="{ 'selected': item.storage === selectStorage }" v-for="(item, index) in storageArr" :key="`storage_${index}`" @click="choiceStorage(item.storage)">
           <p class="storageName">{{ item.storage }}</p>
           <p class="price">{{ item.price }}</p>
         </div>
@@ -102,12 +102,11 @@ $market-red: rgb(186, 12, 47);
 }
 
 .color_wrap {
-  padding-bottom: 1.5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
   border-bottom: 1px dashed darkgrey;
 }
-.storage_wrap {
-  margin-top: 1.5rem;
-}
+
 .color_wrap, .storage_wrap {
   width: 100%;
   .color:nth-child(odd), .storage:nth-child(odd) {
@@ -136,10 +135,10 @@ $market-red: rgb(186, 12, 47);
     }
   }
   .storageName {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .price {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: gray;
   }
 
