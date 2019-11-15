@@ -1,7 +1,8 @@
 <template>
   <div class="section1">
     <div class="left_wrap">
-      <img :src="require(`@/assets/img/iphone/market/${selectColor}.png`)" class="img--market" :alt="`iphone11_market_color_${selectColor}`" :title="`iphone11_market_color_${selectColor}`">
+      <!-- <img :src="require(`@/assets/img/iphone/market/${selectColor}.png`)" class="img--market" :alt="`iphone11_market_color_${selectColor}`" :title="`iphone11_market_color_${selectColor}`"> -->
+      <img :src="abc(selectColor)" class="img--market" :alt="`iphone11_market_color_${selectColor}`" :title="`iphone11_market_color_${selectColor}`">
     </div>
     <div class="right_wrap">
       <h3 class="market--title">iPhone11 구입하기</h3>
@@ -71,6 +72,15 @@ export default {
     },
     choiceStorage (storage) {
       this.selectStorage = storage
+    },
+    abc (color) {
+      let imgSrc = ''
+      try {
+        imgSrc = require(`@/assets/img/iphone/market/${color}.png`)
+        return imgSrc
+      } catch (error) {
+        return require(`@/assets/img/iphone/market/red.png`)
+      }
     }
   }
 }
