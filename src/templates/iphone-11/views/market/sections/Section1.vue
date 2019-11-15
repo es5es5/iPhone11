@@ -22,6 +22,14 @@
           <p class="price">{{ item.price }}</p>
         </div>
       </div>
+      <p class="text-bold">LouisCare+ 를 신청하시겠습니까?</p>
+      <small>하드웨어 및 소프트웨어 보증 기간을 연장하고, iPhone을 가장 잘 아는 전문가로부터 우선적인 지원을 받을 수 있습니다.</small>
+      <div class="care_wrap">
+        <div class="care" :class="{ 'selected': item.storage === selectStorage }" v-for="(item, index) in careArr" :key="`storage_${index}`" @click="choiceStorage(item.storage)">
+          <p class="storageName">{{ item.storage }}</p>
+          <p class="price">{{ item.price }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -31,39 +39,49 @@ export default {
   data () {
     return {
       selectColor: 'black',
-      colorArr: [{
-        id: 'black',
-        name: '블랙'
-      }, {
-        id: 'green',
-        name: '그린'
-      }, {
-        id: 'purple',
-        name: '퍼플'
-      }, {
-        id: 'yellow',
-        name: '옐로'
-      }, {
-        id: 'white',
-        name: '화이트'
-      }, {
-        id: 'red',
-        name: '레드'
-      }],
+      colorArr: [
+        {
+          id: 'black',
+          name: '블랙'
+        }, {
+          id: 'green',
+          name: '그린'
+        }, {
+          id: 'purple',
+          name: '퍼플'
+        }, {
+          id: 'yellow',
+          name: '옐로'
+        }, {
+          id: 'white',
+          name: '화이트'
+        }, {
+          id: 'red',
+          name: '레드'
+        }
+      ],
       selectStorage: '256GB',
-      storageArr: [{
-        storage: '128GB',
-        price: '$2,000'
-      }, {
-        storage: '256GB',
-        price: '$2,760'
-      }, {
-        storage: '1TB',
-        price: '$3,540'
-      }, {
-        storage: '2TB',
-        price: '$4,000'
-      }]
+      storageArr: [
+        {
+          storage: '128GB',
+          price: '$2,000'
+        }, {
+          storage: '256GB',
+          price: '$2,760'
+        }, {
+          storage: '1TB',
+          price: '$3,540'
+        }, {
+          storage: '2TB',
+          price: '$4,000'
+        }
+      ],
+      careArr: [
+        {
+          name: '',
+          price: ''
+        }
+      ]
     }
   },
   methods: {
@@ -111,7 +129,7 @@ $market-red: rgb(186, 12, 47);
   float: right;
 }
 
-.color_wrap {
+.color_wrap, .storage_wrap {
   padding-bottom: 2rem;
   margin-bottom: 2rem;
   border-bottom: 1px dashed darkgrey;
@@ -119,68 +137,88 @@ $market-red: rgb(186, 12, 47);
 
 .color_wrap, .storage_wrap {
   width: 100%;
-  .color:nth-child(odd), .storage:nth-child(odd) {
-    margin-left: 0;
-  }
-  .color:nth-child(even), .storage:nth-child(even) {
-    margin-right: 0;
-  }
+}
+.color:nth-child(odd), .storage:nth-child(odd) {
+  margin-left: 0;
+}
+.color:nth-child(even), .storage:nth-child(even) {
+  margin-right: 0;
+}
 
-  .color, .storage {
-    display: inline-block;
-    text-align: center;
-    cursor: pointer;
-    width: calc(50% - .5rem);
-    padding: 6% 0;
-    border: 1px solid darkgrey;
-    border-radius: .3rem;
-    margin: .5rem;
+.color, .storage {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  width: calc(50% - .5rem);
+  padding: 6% 0;
+  border: 1px solid darkgrey;
+  border-radius: .3rem;
+  margin: .5rem;
 
-    &:hover {
-      border-color: gray;
-    }
-    &:active, &.selected {
-      box-shadow: 0px 0px .35rem .01rem #0070c9;
-      border-color: #0070c9;
-    }
+  &:hover {
+    border-color: gray;
   }
-  .storageName {
-    font-size: 1.8rem;
+  &:active, &.selected {
+    box-shadow: 0px 0px .35rem .01rem #0070c9;
+    border-color: #0070c9;
   }
-  .price {
-    font-size: 1.1rem;
-    color: gray;
-  }
+}
 
-  .colorBall {
-    margin: 0 auto .25rem;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 2rem;
-    &.colorBall-white {
-      background-color: $market-white;
-      border-color: rgba($market-white, .5);
-    }
-    &.colorBall-black {
-      background-color: $market-black;
-      border-color: rgba($market-black, .5);
-    }
-    &.colorBall-green {
-      background-color: $market-green;
-      border-color: rgba($market-green, .5);
-    }
-    &.colorBall-yellow {
-      background-color: $market-yellow;
-      border-color: rgba($market-yellow, .5);
-    }
-    &.colorBall-purple {
-      background-color: $market-purple;
-      border-color: rgba($market-purple, .5);
-    }
-    &.colorBall-red {
-      background-color: $market-red;
-      border-color: rgba($market-red, .5);
-    }
+.care {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  padding: 6% 0;
+  border: 1px solid darkgrey;
+  border-radius: .3rem;
+  margin: .5rem 0;
+
+  &:hover {
+    border-color: gray;
+  }
+  &:active, &.selected {
+    box-shadow: 0px 0px .35rem .01rem #0070c9;
+    border-color: #0070c9;
+  }
+}
+
+.storageName {
+  font-size: 1.8rem;
+}
+.price {
+  font-size: 1.1rem;
+  color: gray;
+}
+
+.colorBall {
+  margin: 0 auto .25rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  &.colorBall-white {
+    background-color: $market-white;
+    border-color: rgba($market-white, .5);
+  }
+  &.colorBall-black {
+    background-color: $market-black;
+    border-color: rgba($market-black, .5);
+  }
+  &.colorBall-green {
+    background-color: $market-green;
+    border-color: rgba($market-green, .5);
+  }
+  &.colorBall-yellow {
+    background-color: $market-yellow;
+    border-color: rgba($market-yellow, .5);
+  }
+  &.colorBall-purple {
+    background-color: $market-purple;
+    border-color: rgba($market-purple, .5);
+  }
+  &.colorBall-red {
+    background-color: $market-red;
+    border-color: rgba($market-red, .5);
   }
 }
 </style>>
