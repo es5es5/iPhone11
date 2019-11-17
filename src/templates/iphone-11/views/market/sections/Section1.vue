@@ -23,11 +23,17 @@
         </div>
       </div>
       <p class="text-bold">LouisCare+ 를 신청하시겠습니까?</p>
-      <small>하드웨어 및 소프트웨어 보증 기간을 연장하고, iPhone을 가장 잘 아는 전문가로부터 우선적인 지원을 받을 수 있습니다.</small>
+      <small>하드웨어 및 소프트웨어 보증 기간을 연장하고, iPhone을 가장 잘 아는 'Louis'로부터 우선적인 지원을 받을 수 있습니다.</small>
       <div class="care_wrap">
-        <div class="care" :class="{ 'selected': item.storage === selectStorage }" v-for="(item, index) in careArr" :key="`storage_${index}`" @click="choiceStorage(item.storage)">
-          <p class="storageName">{{ item.storage }}</p>
+        <div class="care" :class="{ 'selected': item.care === selectCare }" v-for="(item, index) in careArr" :key="`storage_${index}`" @click="choiceCare(item.care)">
+          <p class="careName">{{ item.care }}</p>
+          <p class="careContent">{{ item.content }}</p>
           <p class="price">{{ item.price }}</p>
+        </div>
+      </div>
+      <div class="pay_wrap">
+        <div class="totalPrice_wrap">
+          <h3 class="totalPrice">$1,400</h3>
         </div>
       </div>
     </div>
@@ -76,10 +82,16 @@ export default {
           price: '$4,000'
         }
       ],
+      selectCare: 'LouisCare+',
       careArr: [
         {
-          name: '',
-          price: ''
+          care: 'LouisCare+',
+          content: '알뜰하게 지원',
+          price: '$198'
+        }, {
+          care: 'Louis FullCare+',
+          content: '안심할 수 있는 최고의 FULL 서비스',
+          price: '$260'
         }
       ]
     }
@@ -90,6 +102,9 @@ export default {
     },
     choiceStorage (storage) {
       this.selectStorage = storage
+    },
+    choiceCare (care) {
+      this.selectCare = care
     },
     abc (color) {
       let imgSrc = ''
@@ -129,7 +144,7 @@ $market-red: rgb(186, 12, 47);
   float: right;
 }
 
-.color_wrap, .storage_wrap {
+.color_wrap, .storage_wrap, .care_wrap {
   padding-bottom: 2rem;
   margin-bottom: 2rem;
   border-bottom: 1px dashed darkgrey;
@@ -169,7 +184,7 @@ $market-red: rgb(186, 12, 47);
   text-align: center;
   cursor: pointer;
   width: 100%;
-  padding: 6% 0;
+  padding: 4% 0;
   border: 1px solid darkgrey;
   border-radius: .3rem;
   margin: .5rem 0;
@@ -186,9 +201,19 @@ $market-red: rgb(186, 12, 47);
 .storageName {
   font-size: 1.8rem;
 }
+
+.careName {
+  font-size: 1.5rem;
+}
+
 .price {
   font-size: 1.1rem;
   color: gray;
+}
+
+.careContent {
+  font-size: 1.25rem;
+  color: darkgray;
 }
 
 .colorBall {
@@ -220,5 +245,20 @@ $market-red: rgb(186, 12, 47);
     background-color: $market-red;
     border-color: rgba($market-red, .5);
   }
+}
+
+.pay_wrap {
+  width: 100%;
+  border-radius: .5rem;
+  background-color: #fafafa;
+}
+
+.totalPrice {
+  padding: 3rem;
+}
+
+.totalPrice {
+  font-size: 2.25rem;
+  font-weight: 700;
 }
 </style>>
