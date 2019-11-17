@@ -6,7 +6,7 @@
     </div>
     <div class="right_wrap">
       <h3 class="market--title">iPhone11 구입하기</h3>
-      <p class="market--contents">$2,000 부터</p>
+      <p class="market--contents">{{ storageArr[0].price | numberWithCommaDollar }} 부터</p>
       <p class="text-bold">마음에 쏙 드는 색상을 선택하세요.</p>
       <div class="color_wrap">
         <div class="color" :class="{ 'selected': item.id === selectColor }" v-for="(item, index) in colorArr" :key="`color_${index}`" @click="choiceColor(item.id)">
@@ -73,16 +73,16 @@ export default {
       storageArr: [
         {
           storage: '128GB',
-          price: '2000'
+          price: '1998'
         }, {
           storage: '256GB',
-          price: '2760'
+          price: '2758'
         }, {
           storage: '1TB',
-          price: '3540'
+          price: '3538'
         }, {
           storage: '2TB',
-          price: '4000'
+          price: '3998'
         }
       ],
       selectCare: {
@@ -98,7 +98,7 @@ export default {
         }, {
           care: 'Louis FullCare+',
           content: '안심할 수 있는 최고의 FULL 서비스',
-          price: '260'
+          price: '258'
         }
       ]
     }
