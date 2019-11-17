@@ -17,23 +17,23 @@
       </div>
       <p class="text-bold">충분한 용량을 선택하세요.</p>
       <div class="storage_wrap">
-        <div class="storage" :class="{ 'selected': item.storage === selectStorage }" v-for="(item, index) in storageArr" :key="`storage_${index}`" @click="choiceStorage(item.storage)">
+        <div class="storage" :class="{ 'selected': item.storage === selectStorage.storage }" v-for="(item, index) in storageArr" :key="`storage_${index}`" @click="choiceStorage(item)">
           <p class="storageName">{{ item.storage }}</p>
-          <p class="price">{{ item.price }}</p>
+          <p class="price">{{ item.price | numberWithCommaDollar }}</p>
         </div>
       </div>
       <p class="text-bold">LouisCare+ 를 신청하시겠습니까?</p>
       <small>하드웨어 및 소프트웨어 보증 기간을 연장하고, iPhone을 가장 잘 아는 'Louis'로부터 우선적인 지원을 받을 수 있습니다.</small>
       <div class="care_wrap">
-        <div class="care" :class="{ 'selected': item.care === selectCare }" v-for="(item, index) in careArr" :key="`storage_${index}`" @click="choiceCare(item.care)">
+        <div class="care" :class="{ 'selected': item.care === selectCare.care }" v-for="(item, index) in careArr" :key="`storage_${index}`" @click="choiceCare(item)">
           <p class="careName">{{ item.care }}</p>
           <p class="careContent">{{ item.content }}</p>
-          <p class="price">{{ item.price }}</p>
+          <p class="price">{{ item.price | numberWithCommaDollar }}</p>
         </div>
       </div>
       <div class="pay_wrap">
         <div class="totalPrice_wrap">
-          <h3 class="totalPrice">$1,400</h3>
+          <h3 class="totalPrice">{{ totalPrice | numberWithCommaDollar }}</h3>
         </div>
       </div>
     </div>
@@ -66,34 +66,46 @@ export default {
           name: '레드'
         }
       ],
-      selectStorage: '256GB',
+      selectStorage: {
+        storage: '256GB',
+        price: '2760'
+      },
       storageArr: [
         {
           storage: '128GB',
-          price: '$2,000'
+          price: '2000'
         }, {
           storage: '256GB',
-          price: '$2,760'
+          price: '2760'
         }, {
           storage: '1TB',
-          price: '$3,540'
+          price: '3540'
         }, {
           storage: '2TB',
-          price: '$4,000'
+          price: '4000'
         }
       ],
-      selectCare: 'LouisCare+',
+      selectCare: {
+        care: 'LouisCare+',
+        content: '알뜰하게 지원',
+        price: '198'
+      },
       careArr: [
         {
           care: 'LouisCare+',
           content: '알뜰하게 지원',
-          price: '$198'
+          price: '198'
         }, {
           care: 'Louis FullCare+',
           content: '안심할 수 있는 최고의 FULL 서비스',
-          price: '$260'
+          price: '260'
         }
       ]
+    }
+  },
+  computed: {
+    totalPrice () {
+      return parseInt(this.selectStorage.price) + parseInt(this.selectCare.price)
     }
   },
   methods: {
