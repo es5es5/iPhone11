@@ -1,8 +1,11 @@
 <template>
   <div class="section1">
     <div class="left_wrap">
-      <!-- <img :src="require(`@/assets/img/iphone/market/${selectColor}.png`)" class="img--market" :alt="`iphone11_market_color_${selectColor}`" :title="`iphone11_market_color_${selectColor}`"> -->
-      <img :src="abc(selectColor)" class="img--market" :alt="`iphone11_market_color_${selectColor}`" :title="`iphone11_market_color_${selectColor}`">
+      <!-- <img :src="require(`@/assets/img/iphone/market/market_background_img.png`)" class="img--back" :alt="`iphone11_market_color_${selectColor}`" :title="`iphone11_market_color_${selectColor}`"> -->
+      <!-- <img :src="getImageSrc(selectColor)" class="img--market" :alt="`iphone11_market_color_${selectColor}`" :title="`iphone11_market_color_${selectColor}`"> -->
+      <div class="img_wrap">
+        <div class="img--back" :class="selectColor"></div>
+      </div>
     </div>
     <div class="right_wrap">
       <h3 class="market--title">iPhone11 구입하기</h3>
@@ -118,7 +121,7 @@ export default {
     choiceCare (care) {
       this.selectCare = care
     },
-    abc (color) {
+    getImageSrc (color) {
       let imgSrc = ''
       try {
         imgSrc = require(`@/assets/img/iphone/market/${color}.png`)
@@ -151,6 +154,33 @@ $market-red: rgb(186, 12, 47);
   width: 100%;
   height: 100%;
 }
+
+.img_wrap {
+  padding: 3rem;
+}
+.img--back {
+  width: 100%;
+  height: 460px;
+  background-image: url('../../../../../assets/img/iphone/market/market_background_img.png');
+  background-size: auto;
+  background-repeat: no-repeat;
+  &.white {
+    background-position: -290px 0px;
+  }
+  &.black {
+    background-position: 0 -410px;
+  }
+  &.green {
+    background-position: -300px -410px;
+  }
+  &.yellow {
+    background-position: -590px 0;
+  }
+  &.purple {
+    background-position: -590px -440px;
+  }
+}
+
 .right_wrap {
   width: 50%;
   float: right;
