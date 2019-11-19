@@ -3,7 +3,7 @@
     <nav class="top_wrap">
       <ul class = "nav-list">
         <li class = "apple-logo">
-          <a class = "link-main" href="#">
+          <a class = "link-main" href="/">
             <div class = "img-main-logo"></div>
           </a>
         </li>
