@@ -162,22 +162,25 @@ $market-red: rgb(186, 12, 47);
   width: 100%;
   height: 460px;
   background-image: url('../../../../../assets/img/iphone/market/market_background_img.png');
-  background-size: auto;
+  background-size: 1250px;
   background-repeat: no-repeat;
+  &.red {
+    background-position: 0 -35px;
+  }
   &.white {
-    background-position: -290px 0px;
+    background-position: -410px -43px;
   }
   &.black {
-    background-position: 0 -410px;
+    background-position: 0 -645px;
   }
   &.green {
-    background-position: -300px -410px;
+    background-position: -410px -648px;
   }
   &.yellow {
-    background-position: -590px 0;
+    background-position: -820px -40px;
   }
   &.purple {
-    background-position: -590px -440px;
+    background-position: -820px -643px;
   }
 }
 
