@@ -5,7 +5,7 @@ import IPhoneRoutes from './templates/iphone-11/routes.js'
 
 Vue.use(Router)
 
-export default new Router({
+let router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -25,3 +25,15 @@ export default new Router({
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  let routeMetaTitle = to.meta.title
+  if (routeMetaTitle === undefined || routeMetaTitle === '') {
+    document.title = 'Louis Apple'
+  } else {
+    document.title = `${to.meta.title} | Louis Apple`
+  }
+  next()
+})
+
+export default router

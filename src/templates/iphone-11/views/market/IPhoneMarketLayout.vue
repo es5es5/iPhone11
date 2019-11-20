@@ -47,3 +47,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.iphone_market {
+  @media (max-width: 1024px) {
+    padding: 0 1rem;
+  }
+}
+</style>

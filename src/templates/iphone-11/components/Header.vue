@@ -26,12 +26,12 @@ export default {
     goMainLayout () {
       this.$router.push({
         name: 'IPhoneMainLayout'
-      })
+      }).catch(() => {})
     },
     goMarketLayout () {
       this.$router.push({
         name: 'IPhoneMarketLayout'
-      })
+      }).catch(() => {})
     }
   }
 }
@@ -45,7 +45,7 @@ export default {
   border-bottom: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 980px) {
+  @media (max-width: 980px) {
     padding: 0 1rem;
   }
 }
