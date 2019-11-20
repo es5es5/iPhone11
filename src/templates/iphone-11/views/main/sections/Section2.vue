@@ -57,13 +57,12 @@ export default {
 
 .action_wrap {
   width: 80%;
-  margin: 0 auto;
 
   .radio--sideColor_container {
     .radio--sideColor_wrap {
       position: relative;
       display: inline-block;
-      padding: 1rem;
+      padding: 1rem 2rem;
 
       .radio--sideColor {
         // go ahead.
@@ -71,7 +70,7 @@ export default {
       .label--sideColor {
         position: absolute;
         bottom: 3rem;
-        left: .5rem;
+        left: 1.5rem;
         font-weight: 600;
         font-size: 1.2rem;
       }
