@@ -23,11 +23,4 @@ export default {
 .top {
   width: 100%;
 }
-.header {
-  width: 100%;
-  @media screen and (min-width: 1024px) {
-    max-width: 980px;
-    margin: 0 auto;
-  }
-}
 </style>

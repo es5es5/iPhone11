@@ -39,11 +39,15 @@ export default {
 
 <style lang="scss" scoped>
 .header_wrap {
+  margin: 0 auto;
+  max-width: 980px;
   height: 3.15rem;
   border-bottom: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
-  max-width: 980px;
+  @media screen and (max-width: 980px) {
+    padding: 0 1rem;
+  }
 }
 
 .title {
