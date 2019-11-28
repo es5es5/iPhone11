@@ -43,21 +43,34 @@ export default {
   name: 'Section3',
   data () {
     return {
-      scrolled: false
+      scrolled: false,
+      sectionHeight: false
     }
   },
   computed: {
     _scrolled () {
       return this.scrolled
+    },
+    _sectionHeight () {
+      return this.sectionHeight
     }
   },
   methods: {
     handleScroll () {
       this.scrolled = window.scrollY > 1170
+      let videoBox = document.getElementById('motion-video')
+
+      console.log(this._sizing)
       if (this._scrolled) {
-        document.getElementById('motion-video').play()
+        videoBox.play()
       } else {
-        document.getElementById('motion-video').pause()
+        videoBox.pause()
+      }
+
+      if (window.scrollY > 2500) {
+        videoBox.style.width = '980px'
+        videoBox.style.display = 'block'
+        videoBox.style.margin = '0 auto'
       }
     }
   },
@@ -102,8 +115,9 @@ export default {
             &:focus{
                 background-color: black;
                 border-radius: 1rem;
+                transition-duration: 1s;
                 p{
-                    color: #ffffff
+                    color: #ffffff;
                 }
             }
         }
