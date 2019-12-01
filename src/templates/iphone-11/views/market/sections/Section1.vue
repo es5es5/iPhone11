@@ -6,6 +6,11 @@
       <div class="img_wrap">
         <div class="img--back" :class="selectColor"></div>
       </div>
+      <div class="pay_wrap">
+        <div class="totalPrice_wrap">
+          <h3 class="totalPrice">총 가격: {{ totalPrice | numberWithCommaDollar }}</h3>
+        </div>
+      </div>
     </div>
     <div class="right_wrap">
       <h3 class="market--title">iPhone11 구입하기</h3>
@@ -32,11 +37,6 @@
           <p class="careName">{{ item.care }}</p>
           <p class="careContent">{{ item.content }}</p>
           <p class="price">{{ item.price | numberWithCommaDollar }}</p>
-        </div>
-      </div>
-      <div class="pay_wrap">
-        <div class="totalPrice_wrap">
-          <h3 class="totalPrice">{{ totalPrice | numberWithCommaDollar }}</h3>
         </div>
       </div>
     </div>
@@ -104,7 +104,10 @@ $market-red: rgb(186, 12, 47);
 
 .right_wrap {
   width: 50%;
+  padding: 1rem 1.5rem;
   float: right;
+  max-height: 44.5rem;
+  overflow-y: scroll;
 }
 
 .color_wrap, .storage_wrap, .care_wrap {
@@ -211,17 +214,18 @@ $market-red: rgb(186, 12, 47);
 }
 
 .pay_wrap {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   border-radius: .5rem;
   background-color: #fafafa;
 }
 
-.totalPrice {
-  padding: 3rem;
+.totalPrice_wrap {
+  padding: 2rem;
 }
 
 .totalPrice {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 </style>>

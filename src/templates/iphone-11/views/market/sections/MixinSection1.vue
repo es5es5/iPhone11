@@ -9,6 +9,15 @@ export default {
       selectColor: 'black',
       colorArr: [
         {
+          id: 'red',
+          name: '레드'
+        }, {
+          id: 'yellow',
+          name: '옐로'
+        }, {
+          id: 'white',
+          name: '화이트'
+        }, {
           id: 'black',
           name: '블랙'
         }, {
@@ -17,15 +26,6 @@ export default {
         }, {
           id: 'purple',
           name: '퍼플'
-        }, {
-          id: 'yellow',
-          name: '옐로'
-        }, {
-          id: 'white',
-          name: '화이트'
-        }, {
-          id: 'red',
-          name: '레드'
         }
       ],
       selectStorage: {
