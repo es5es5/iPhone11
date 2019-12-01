@@ -24,7 +24,7 @@ export default {
   font-size: 1.5rem;
   margin: 5% 0;
   text-align: center;
-  line-height: 1.5;
+  line-height: 1.75;
 }
 .about_wrap {
   bottom: 0;
@@ -39,5 +39,10 @@ export default {
 }
 a {
   display: block;
+  &:hover {
+    text-decoration: underline;
+    transform: translate(0, -.5rem);
+    transition: all .75s;
+  }
 }
 </style>
