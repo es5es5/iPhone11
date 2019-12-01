@@ -68,6 +68,12 @@ export default {
   computed: {
     totalPrice () {
       return parseInt(this.selectStorage.price) + parseInt(this.selectCare.price)
+    },
+    totalPrice_KRW () {
+      return (parseInt(this.selectStorage.price) + parseInt(this.selectCare.price)) * 1180
+    },
+    totalPrice_JPY () {
+      return parseInt((parseInt(this.selectStorage.price) + parseInt(this.selectCare.price)) * 109.48)
     }
   },
   methods: {

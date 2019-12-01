@@ -10,7 +10,17 @@ export default {
 
     Vue.filter('numberWithCommaDollar', value => {
       if (value !== 0 && !value) return ''
-      return `$${value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`
+      return `$ ${value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`
+    })
+
+    Vue.filter('numberWithCommaWon', value => {
+      if (value !== 0 && !value) return ''
+      return `₩ ${value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`
+    })
+
+    Vue.filter('numberWithCommaYen', value => {
+      if (value !== 0 && !value) return ''
+      return `¥ ${value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`
     })
   }
 }

@@ -9,6 +9,8 @@
       <div class="pay_wrap">
         <div class="totalPrice_wrap">
           <h3 class="totalPrice">총 가격: {{ totalPrice | numberWithCommaDollar }}</h3>
+          <p>( {{ totalPrice_KRW | numberWithCommaWon }} )</p>
+          <p>( {{ totalPrice_JPY | numberWithCommaYen }} )</p>
         </div>
       </div>
     </div>
@@ -221,7 +223,9 @@ $market-red: rgb(186, 12, 47);
 }
 
 .totalPrice_wrap {
-  padding: 2rem;
+  padding: 1rem 5rem;
+  text-align: right;
+  line-height: 1.5;
 }
 
 .totalPrice {
