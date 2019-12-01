@@ -7,6 +7,9 @@
       <router-link tag="a" class="link" :to="{ name: 'IPhone11' }">iPhone11.</router-link>
       <router-link tag="a" class="link" :to="{ name: 'IPhoneMarketLayout' }">iPhone11 Market.</router-link>
     </div>
+    <footer class="about_wrap">
+      <a href="https://github.com/es5es5/resume/blob/master/RESUME.md" target="_blank" rel="noopener noreferrer">About Me.</a>
+    </footer>
   </div>
 </template>
 
@@ -18,9 +21,21 @@ export default {
 
 <style lang="scss" scoped>
 .welcome_wrap {
-  margin: 10%;
+  font-size: 1.5rem;
+  margin: 5% 0;
   text-align: center;
   line-height: 1.5;
+}
+.about_wrap {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  width: 80%;
+  margin: 0 auto;
+  padding: 5% 0;
+  text-align: center;
+  border-top: 1px dashed #777;
 }
 a {
   display: block;
