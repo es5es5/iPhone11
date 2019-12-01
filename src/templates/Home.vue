@@ -39,6 +39,7 @@ export default {
 }
 a {
   display: block;
+  transition: all 1s;
   &:hover {
     text-decoration: underline;
     transform: translate(0, -.5rem);
