@@ -6,7 +6,7 @@
 export default {
   data () {
     return {
-      selectColor: 'black',
+      selectColor: 'red',
       colorArr: [
         {
           id: 'red',
