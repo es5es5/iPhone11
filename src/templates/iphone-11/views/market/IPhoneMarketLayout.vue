@@ -1,17 +1,32 @@
 <template>
-  <div class="iphone_market">
-    <Section1 v-if="!isMobile"></Section1>
-    <Section1Mobile v-else></Section1Mobile>
+  <div class="iphone_market_layout">
+    <template v-if="!isMobile">
+      <Section1></Section1>
+      <Section2></Section2>
+      <Section3></Section3>
+    </template>
+    <template v-else>
+      <Section1Mobile></Section1Mobile>
+    </template>
   </div>
 </template>
 
 <script>
+// Web
 import Section1 from './sections/Section1'
+import Section2 from './sections/Section2'
+import Section3 from './sections/Section3'
+
+// Mobile
 import Section1Mobile from './sections/Section1Mobile'
 
 export default {
   components: {
+    // Web
     Section1,
+    Section2,
+    Section3,
+    // Mobile
     Section1Mobile
   },
   data () {
@@ -49,9 +64,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.iphone_market {
-  @media (max-width: 1024px) {
-    padding: 0 1rem;
-  }
-}
 </style>

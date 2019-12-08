@@ -1,5 +1,5 @@
 <template>
-  <div class="section1">
+  <div class="section1 clearfix">
     <div class="left_wrap">
       <!-- <img :src="require(`@/assets/img/iphone/market/market_background_img.png`)" class="img--back" :alt="`iphone11_market_color_${selectColor}`" :title="`iphone11_market_color_${selectColor}`"> -->
       <!-- <img :src="getImageSrc(selectColor)" class="img--market" :alt="`iphone11_market_color_${selectColor}`" :title="`iphone11_market_color_${selectColor}`"> -->
@@ -14,6 +14,8 @@
         </div>
       </div>
     </div>
+    <!-- /left_wrap -->
+
     <div class="right_wrap">
       <h3 class="market--title">iPhone11 구입하기</h3>
       <p class="market--contents">{{ storageArr[0].price | numberWithCommaDollar }} 부터</p>
@@ -42,6 +44,7 @@
         </div>
       </div>
     </div>
+    <!-- /right_wrap -->
   </div>
 </template>
 
@@ -65,6 +68,9 @@ $market-red: rgb(186, 12, 47);
 .section1 {
   margin: 0 auto;
   max-width: 980px;
+  @media (max-width: 1024px) {
+    padding: 0 1rem;
+  }
 }
 .left_wrap {
   width: 50%;
