@@ -27,11 +27,11 @@ export default {
         title: '자주묻는 질문',
         content: [{
           title: '왜 이렇게 비싸요?',
-          content: '돈 많이 벌려고 합니다.',
+          content: '돈 많이 벌려고 합니다. 우선 입금하세요.',
           show: false
         }, {
           title: '이거 정말 정품 맞나요?',
-          content: '사진은 정품입니다.',
+          content: '사진은 정품 모델입니다.',
           show: false
         }, {
           title: '누가 만든거에요?',
@@ -51,9 +51,8 @@ export default {
 
 <style lang="scss" scoped>
 .section3 {
-  margin: 0 auto 1rem;
+  margin: 0 auto;
   max-width: 980px;
-  margin-bottom: 1rem;
   @media (max-width: 1024px) {
     padding: 0 1rem;
   }
