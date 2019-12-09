@@ -2,7 +2,7 @@
   <div id="home">
     <div class="welcome_wrap">
       <h1>Hello! Welcome to My Page.</h1>
-      <p>This is just a copy for Study.</p>
+      <p>This is just a copy for <span class="text--bold">Portfolio</span>.</p>
       <br>
       <router-link tag="a" class="link" :to="{ name: 'IPhone11' }">iPhone11.</router-link>
       <router-link tag="a" class="link" :to="{ name: 'IPhoneMarketLayout' }">iPhone11 Market.</router-link>

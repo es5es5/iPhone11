@@ -27,19 +27,23 @@ export default {
         title: '자주묻는 질문',
         content: [{
           title: '왜 이렇게 비싸요?',
-          content: '돈 많이 벌려고 합니다. 우선 입금하세요.',
+          content: '돈 많이 벌려고 합니다. 우선 입금하세요!',
+          show: false
+        }, {
+          title: '전화가 되긴 되나요?',
+          content: '네, 당연히 안됩니다.',
           show: false
         }, {
           title: '이거 정말 정품 맞나요?',
           content: '사진은 정품 모델입니다.',
           show: false
         }, {
-          title: '누가 만든거에요?',
-          content: 'Made by Louis.',
+          title: 'A/S 는 돼요?',
+          content: 'No After Service, No Refund.',
           show: false
         }, {
-          title: '전화가 되긴 되나요?',
-          content: '당연히 안됩니다.',
+          title: '누가 만든거에요?',
+          content: 'Made by Louis.',
           show: false
         }],
         show: false
@@ -70,7 +74,7 @@ export default {
 .accordion-title_wrap:hover { cursor: pointer; }
 
 .accordion-title {
-  padding: 2.5rem 2rem 1.5rem;
+  padding: 2.5rem 2rem;
   font-size: 2.5rem;
   font-weight: 700;
   border-bottom: 1px solid lightgray;
