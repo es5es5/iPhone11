@@ -66,7 +66,7 @@ $market-purple: rgb(209, 205, 219);
 $market-red: rgb(186, 12, 47);
 
 .section1 {
-  margin: 0 auto;
+  margin: 0 auto 1rem;
   max-width: 980px;
   @media (max-width: 1024px) {
     padding: 0 1rem;

@@ -14,6 +14,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.section2 {
+  margin-bottom: 1rem;
+}
 .gallery {
   width: 100%;
   height: auto;
