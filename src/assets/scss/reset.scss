@@ -1,29 +1,20 @@
 @charset 'utf-8';
 
 /* reset */
-*, *::after, *::before {
-	box-sizing: border-box;
-}
+*, *::after, *::before { box-sizing: border-box; }
 
 // hidden scrollbar
-*::-webkit-scrollbar {
-  display: none;
-}
-* {
-  -ms-overflow-style: none;
-}
+*::-webkit-scrollbar { display: none; }
+* { -ms-overflow-style: none; }
 
 html, body {
   margin: 0;
   padding: 0;
 	position: relative;
   font-size: 14px;
-  @media (max-width: 950px) {
-    font-size: 12px;
-  }
-  @media (max-width: 735px) {
-    font-size: 10px;
-  }
+  @media (max-width: 950px) { font-size: 12px; }
+  @media (max-width: 735px) { font-size: 10px; }
+	font-family: 'Avenir', Helvetica, Arial, sans-serif;
 	&.show_overlay { overflow-y: hidden; }
 }
 button, input, select,
@@ -31,17 +22,13 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	padding: 0;
 	font-size: 14px;
-	@media (max-width: 950px) {
-    font-size: 12px;
-  }
-	@media (max-width: 735px) {
-    font-size: 10px;
-  }
+	@media (max-width: 950px) { font-size: 12px; }
+	@media (max-width: 735px) { font-size: 10px; }
   font-weight: normal;
 }
-button:focus {
-  outline: none !important;
-}
+
+button:focus { outline: none !important; }
+
 ul, li {
 	margin: 0;
 	padding: 0;
@@ -58,9 +45,7 @@ a {
 	text-decoration: none;
 	&:hover,
 	&:active,
-	&:focus {
-		text-decoration: none;
-	}
+	&:focus { text-decoration: none; }
 }
 
 b, strong, em {
