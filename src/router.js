@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './templates/Home.vue'
+import HomeJSG from './templates/HomeJSG.vue'
 import IPhoneRoutes from './templates/iphone-11/routes.js'
 
 Vue.use(Router)
@@ -11,8 +12,13 @@ let router = new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'Home',
       component: Home
+    },
+    {
+      path: '/jsg',
+      name: 'HomeJSG',
+      component: HomeJSG
     },
     {
       path: '/iphone-11',
