@@ -1,43 +1,18 @@
 <template>
   <div id="top">
     <nav class="top_wrap">
-      <ul class = "nav-list">
-        <li class = "apple-logo">
-          <a class = "link-main" href="/">
-            <div class = "img-main-logo"></div>
-          </a>
+      <ul class="nav-list">
+        <li class="apple-logo">
+          <a class="link-main" href="/"><div class="img-main-logo"></div></a>
         </li>
-        <li>
-          <p>Mac</p>
-        </li>
-        <li>
-          <p>iPad</p>
-        </li>
-        <li>
-          <p>Mac</p>
-        </li>
-        <li>
-          <p>iPhone</p>
-        </li>
-        <li>
-          <p>Watch</p>
-        </li>
-        <li>
-          <p>Music</p>
-        </li>
-        <li>
-          <p>고객지원</p>
-        </li>
-        <li>
-           <a href="#">
-             <div class = "img-main-search"></div>
-           </a>
-        </li>
-        <li>
-           <a href="#">
-             <div class = "img-main-market"></div>
-           </a>
-        </li>
+        <li><a><p>Mac</p></a></li>
+        <li><a><p>iPad</p></a></li>
+        <li><a href="/iphone-11"><p>iPhone</p></a></li>
+        <li><a><p>Watch</p></a></li>
+        <li><a><p>Music</p></a></li>
+        <li><a><p>고객지원</p></a></li>
+        <li><a><div class="img-main-search"></div></a></li>
+        <li><a href="/iphone-11/market"><div class="img-main-market"></div></a></li>
       </ul>
     </nav>
   </div>
@@ -45,12 +20,11 @@
 
 <script>
 export default {
-
+  name: 'Top'
 }
 </script>
 
 <style lang="scss" scoped>
-
 .nav-list{
   max-width: 980px;
   margin: 0 auto;
