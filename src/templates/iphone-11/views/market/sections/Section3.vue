@@ -84,11 +84,15 @@ export default {
   margin: 1rem 1.5rem;
   padding: 1rem 0;
   border-bottom: 1px solid lightgray;
+
 }
 
 .accordion-subTitle {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: .5rem;
+  :hover {
+    color: rgba(#026fc9, .8);
+  }
 }
 </style>
