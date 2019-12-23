@@ -10,7 +10,7 @@
         <li><a href="/iphone-11"><p>iPhone</p></a></li>
         <li><a><p>Watch</p></a></li>
         <li><a><p>Music</p></a></li>
-        <li><a><p>고객지원</p></a></li>
+        <li><a @click="goServiceLayout"><p>고객지원</p></a></li>
         <li><a><div class="img-main-search"></div></a></li>
         <li><a href="/iphone-11/market"><div class="img-main-market"></div></a></li>
       </ul>
@@ -20,7 +20,14 @@
 
 <script>
 export default {
-  name: 'Top'
+  name: 'Top',
+  methods: {
+    goServiceLayout () {
+      this.$router.push({
+        name: 'IPhoneServiceLayout'
+      }).catch(() => {})
+    }
+  }
 }
 </script>
 
