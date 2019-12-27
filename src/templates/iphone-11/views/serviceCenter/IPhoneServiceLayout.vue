@@ -17,6 +17,7 @@ export default {
     Section1
   },
   data () {
+    return {}
   },
   created () {
   },
