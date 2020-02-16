@@ -9,6 +9,7 @@
 @import '@/assets/scss/contents.scss';
 @import '@/assets/scss/section.scss';
 @import '@/assets/scss/common.scss';
+@import '@/assets/scss/animations.scss';
 
 #app {
   height: 100%;

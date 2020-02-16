@@ -9,7 +9,7 @@
         <li class="spec">
           <p>제품 사양</p>
         </li>
-        <li class="price" @click="goMarketLayout">
+        <li class="price bounce" @click="goMarketLayout">
           <p>구입하기</p>
         </li>
       </ul>

@@ -1,0 +1,17 @@
+@charset 'utf-8';
+
+.bounce {
+  position: relative;
+  /* 파폭 */
+  -moz-animation: bounce .8s infinite ease-out;
+  /* 크롬 */
+  -webkit-animation: bounce .8s infinite ease-out;
+  -o-animation: bounce .8s infinite ease-out;
+  animation: bounce .8s infinite ease-out;
+}
+
+@keyframes bounce {
+  0% { top: 0; }
+  50% { top: -.5rem; }
+  100% { top: 0; }
+}
