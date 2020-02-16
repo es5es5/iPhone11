@@ -6,7 +6,7 @@
     <div class="action_wrap">
       <ul class="radio--sideColor_container">
         <li class="radio--sideColor_wrap" v-for="(item, index) in colorArr" :key="index">
-          <input type="radio" name="sideColor" :id="`sideColor_${item.id}`" class="radio--sideColor" :value="item.id" v-model="selectColor">
+          <input type="radio" name="sideColor" :id="`sideColor_${item.id}`" class="radio--sideColor checkbox" :value="item.id" v-model="selectColor">
           <label :for="`sideColor_${item.id}`" class="label--sideColor">{{ item.name }}</label>
         </li>
       </ul>

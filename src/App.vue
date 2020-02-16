@@ -10,6 +10,7 @@
 @import '@/assets/scss/section.scss';
 @import '@/assets/scss/common.scss';
 @import '@/assets/scss/animations.scss';
+@import '@/assets/scss/checkbox.scss';
 
 #app {
   height: 100%;
