@@ -30,7 +30,7 @@ export default {
       ],
       selectStorage: {
         storage: '256GB',
-        price: '2760'
+        price: '1998'
       },
       storageArr: [
         {
